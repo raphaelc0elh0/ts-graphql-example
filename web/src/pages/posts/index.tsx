@@ -56,14 +56,12 @@ export default function PostList() {
       <Stack>
         {data?.getPosts.map((post) => (
           <Link key={post?.id} to={`/posts/${post?.id}`}>
-            <LinkOverlay>
-              <Card>
-                <CardHeader>
-                  <Heading>{post?.title}</Heading>
-                  <Text>{post?.votes}</Text>
-                </CardHeader>
-              </Card>
-            </LinkOverlay>
+            <Card>
+              <CardHeader>
+                <Heading>{post?.title}</Heading>
+                <Text>{post?.votes}</Text>
+              </CardHeader>
+            </Card>
           </Link>
         ))}
       </Stack>
