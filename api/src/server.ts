@@ -1,6 +1,3 @@
-import "reflect-metadata";
-import "./shared/container";
-
 import { expressApp } from "./app";
 
 expressApp().then((app) => {

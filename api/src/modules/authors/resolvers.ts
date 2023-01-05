@@ -1,10 +1,9 @@
-import { container } from "tsyringe";
 import { NotFoundError } from "../../shared/error/NotFoundError";
 import PostsRepository from "../posts/repository";
 import AuthorsRepository from "./repository";
 
-const authorsRepo = container.resolve(AuthorsRepository);
-const postsRepo = container.resolve(PostsRepository);
+const authorsRepo = new AuthorsRepository();
+const postsRepo = new PostsRepository();
 
 const resolvers = {
   Author: {
