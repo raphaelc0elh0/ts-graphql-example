@@ -2,7 +2,7 @@ import express, { json } from "express";
 import cors from "cors";
 import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
-import { schema } from "./utils/schema";
+import schema from "./utils/graphql/schema";
 
 export const expressApp = async () => {
   const app = express();

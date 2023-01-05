@@ -9,4 +9,5 @@ const typeDefs = loadSchemaSync("./src/**/*.graphql", {
 });
 const resolvers = mergeResolvers(loadFilesSync("./src/**/resolvers.ts"));
 
-export const schema = makeExecutableSchema({ typeDefs, resolvers });
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+export default schema;
