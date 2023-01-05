@@ -1,0 +1,7 @@
+query GetAuthors {
+  getAuthors {
+    id
+    firstName
+    lastName
+  }
+}

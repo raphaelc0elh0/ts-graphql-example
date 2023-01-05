@@ -23,6 +23,10 @@ const resolvers = {
 
       return author;
     },
+
+    getAuthors() {
+      return authorsRepo.list();
+    },
   } as QueryResolvers,
 };
 

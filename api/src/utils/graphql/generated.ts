@@ -50,6 +50,7 @@ export type Post = {
 export type Query = {
   __typename?: 'Query';
   getAuthor?: Maybe<Author>;
+  getAuthors: Array<Maybe<Author>>;
   getPosts: Array<Maybe<Post>>;
 };
 
@@ -174,6 +175,7 @@ export type PostResolvers<ContextType = any, ParentType extends ResolversParentT
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   getAuthor?: Resolver<Maybe<ResolversTypes['Author']>, ParentType, ContextType, RequireFields<QueryGetAuthorArgs, 'id'>>;
+  getAuthors?: Resolver<Array<Maybe<ResolversTypes['Author']>>, ParentType, ContextType>;
   getPosts?: Resolver<Array<Maybe<ResolversTypes['Post']>>, ParentType, ContextType>;
 };
 

@@ -18,4 +18,8 @@ export default class AuthorsRepository {
   findById(id: string) {
     return this.authors.find((author) => author.id === id);
   }
+
+  list() {
+    return this.authors;
+  }
 }

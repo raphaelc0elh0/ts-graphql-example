@@ -7,4 +7,5 @@ type Author {
 
 type Query {
   getAuthor(id: ID!): Author
+  getAuthors: [Author]!
 }
